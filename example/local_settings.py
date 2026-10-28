@@ -12,6 +12,9 @@ SCRIPT_NAME = FORCE_SCRIPT_NAME
 
 DEBUG = True
 
+# nginx (www-data) serves MEDIA_ROOT. Uploaded temp files stay 0o600 otherwise.
+FILE_UPLOAD_PERMISSIONS = 0o644
+
 ADMINS = (
      ('coderus', 'coderusinbox@gmail.com'),
 )
